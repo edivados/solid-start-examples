@@ -1,0 +1,39 @@
+{
+  "name": "example-trpc-prisma",
+  "scripts": {
+    "dev": "solid-start dev",
+    "build": "solid-start build",
+    "preview": "solid-start start",
+    "start": "node ./dist/server.js",
+    "prisma:init": "prisma migrate dev --name init",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:reset": "prisma migrate reset && prisma:migrate"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@solidjs/meta": "^0.28.6",
+    "@solidjs/router": "^0.8.3",
+    "@trpc/client": "^10.38.0",
+    "@trpc/server": "^10.38.0",
+    "@types/node": "^18.0.0",
+    "cross-env": "^7.0.3",
+    "solid-js": "^1.7.11",
+    "solid-start": "^0.3.4",
+    "solid-start-node": "^0.3.4",
+    "superjson": "^1.13.1",
+    "tsx": "^3.12.7",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "zod": "^3.22.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.2.0",
+    "prisma": "^5.2.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  }
+}

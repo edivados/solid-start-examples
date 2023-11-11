@@ -1,0 +1,44 @@
+{
+  "name": "solid-start-node-websocket",
+  "main": "./index.js",
+  "type": "module",
+  "solid": {
+    "type": "adapter"
+  },
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "compression": "^1.7.4",
+    "polka": "1.0.0-next.22",
+    "rollup": "^3.26.2",
+    "sirv": "^2.0.3",
+    "terser": "^5.19.0"
+  },
+  "devDependencies": {
+    "vite": "^4.4.6",
+    "solid-start": "0.3.5"
+  },
+  "peerDependencies": {
+    "solid-start": "*",
+    "vite": "*"
+  },
+  "exports": {
+    ".": {
+      "default": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "./response": {
+      "default": "./response.js",
+      "types": "./response.d.ts" 
+    },
+    "./server": "./server.js"
+  },
+  "files": [
+    "dev-handler.js",
+    "entry.js",
+    "index.js",
+    "response.js",
+    "server.js"
+  ]
+}

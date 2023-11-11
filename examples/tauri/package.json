@@ -1,0 +1,26 @@
+{
+  "name": "example-tauri",
+  "type": "module",
+  "scripts": {
+    "dev": "solid-start dev",
+    "build": "solid-start build",
+    "preview": "solid-start start",
+    "serve": "node ./dist/server.js",
+    "tauri": "tauri"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@solidjs/meta": "^0.29.1",
+    "@solidjs/router": "^0.8.3",
+    "@tauri-apps/api": "^1.2.0",
+    "solid-js": "^1.4.7",
+    "solid-start": "^0.3.10",
+    "solid-start-node": "^0.3.10"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.10",
+    "@tauri-apps/cli": "^1.2.2",
+    "typescript": "^4.7.4",
+    "vite": "^4.0.0"
+  }
+}
