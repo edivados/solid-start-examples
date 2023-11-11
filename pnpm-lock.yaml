@@ -6,7 +6,11 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    devDependencies:
+      fast-glob:
+        specifier: ^3.3.2
+        version: 3.3.2
 
   examples/docker:
     devDependencies:

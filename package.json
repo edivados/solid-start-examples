@@ -1,4 +1,11 @@
 {
   "name": "solid-start-examples-repo",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "bump": "node ./scripts/bump.js"
+  },
+  "devDependencies": {
+    "fast-glob": "^3.3.2"
+  }
 }
