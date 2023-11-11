@@ -14,7 +14,7 @@
     "@types/ws": "^8.5.5",
     "socket.io": "^4.7.2",
     "socket.io-client": "^4.7.2",
-    "solid-js": "^1.7.11",
+    "solid-js": "^1.8.5",
     "solid-start": "^0.3.10",
     "solid-start-node-websocket": "workspace:^",
     "typescript": "^4.9.5",

@@ -8,12 +8,12 @@
   },
   "type": "module",
   "devDependencies": {
-    "@solidjs/meta": "^0.28.6",
-    "@solidjs/router": "^0.8.3",
+    "@solidjs/meta": "^0.29.1",
+    "@solidjs/router": "^0.9.1",
     "@types/node": "^18.11.18",
-    "solid-js": "^1.7.11",
-    "solid-start": "^0.3.5",
-    "solid-start-node": "^0.3.5",
+    "solid-js": "^1.8.5",
+    "solid-start": "^0.3.10",
+    "solid-start-node": "^0.3.10",
     "typescript": "^5.2.2",
     "vite": "^4.4.9"
   },
