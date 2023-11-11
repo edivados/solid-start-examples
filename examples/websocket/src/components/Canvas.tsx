@@ -1,12 +1,5 @@
 import { JSX, createEffect, createMemo, createSignal } from "solid-js";
-
-type DrawInstruction = {
-  moveTo: { x: number, y: number },
-  lineTo: { x: number, y: number },
-  strokeStyle: string,
-  lineWidth: number,
-  lineCap: CanvasLineCap,
-}
+import type { DrawInstruction } from "~/middlewares/types";
 
 type CanvasOptions = {
   color?: string,
