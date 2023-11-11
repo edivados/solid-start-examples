@@ -16,8 +16,9 @@
     "terser": "^5.19.0"
   },
   "devDependencies": {
-    "vite": "^4.4.6",
-    "solid-start": "0.3.5"
+    "debug": "^4.3.4",
+    "solid-start": "^0.3.10",
+    "vite": "^4.4.6"
   },
   "peerDependencies": {
     "solid-start": "*",
@@ -30,7 +31,7 @@
     },
     "./response": {
       "default": "./response.js",
-      "types": "./response.d.ts" 
+      "types": "./response.d.ts"
     },
     "./server": "./server.js"
   },

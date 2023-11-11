@@ -15,7 +15,7 @@ export default () => ({
       const response = await handler(request);
       if (!response.headers.has("x-ws-upgrade")) {
         // TODO: send response headers
-        socket.destory();
+        socket.end();
       }
     });
     return handler;

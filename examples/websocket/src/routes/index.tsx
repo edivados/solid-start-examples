@@ -1,14 +1,14 @@
 import { Title } from "solid-start";
-import SocketIOCanvas from "~/components/SocketIOCanvas";
-import WSCanvas from "~/components/WSCanvas";
+import CanvasSocketIO from "~/components/CanvasSocketIO";
+import CanvasWS from "~/components/CanvasWS";
 
 export default function Home() {
   return (
     <main>
       <Title>Hello World</Title>
       <h1>Hello world!</h1>
-      <WSCanvas />
-      <SocketIOCanvas />
+      <CanvasWS />
+      <CanvasSocketIO />
       <p>
         Visit{" "}
         <a href="https://start.solidjs.com" target="_blank">

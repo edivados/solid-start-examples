@@ -1,5 +1,5 @@
 import { dirname, join } from "path";
-import { createServer } from "solid-start-node-ws/server";
+import { createServer } from "solid-start-node-websocket/server";
 import "solid-start/node/globals.js";
 import { fileURLToPath } from "url";
 import manifest from "../../dist/public/route-manifest.json";

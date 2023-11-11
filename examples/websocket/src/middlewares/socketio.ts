@@ -7,17 +7,11 @@ let server: Server;
 function onConnection(client: Socket) {
   console.log("socket.io/connection:", "client connected 🎉");
 
-  client.on("error", (e) => {
-    console.log("socket.io/client/error:", e);
-  });
-
   client.on("message", (data) => {
-    // console.log("socket.io/client/message:", data);
     server.sockets.send(data);
   });
 
   client.on('disconnect', () => {
-    console.log("socket.io/disconnect");
     console.log("socket.io/disconnect:", "client disconnected 👋");
   });
 }
