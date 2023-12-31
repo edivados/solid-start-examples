@@ -1,13 +1,11 @@
-FROM node:lts-alpine3.16 as build
-WORKDIR /usr/local/src/bare
+FROM node:lts-buster-slim as build
+WORKDIR /usr/local/src/basic
 COPY ./ ./
-RUN npm ci && npm run build
+RUN npm i && npm run build
 
-FROM node:lts-alpine3.16
+FROM node:lts-buster-slim
 ENV NODE_ENV=production
 WORKDIR /app
-COPY --from=build /usr/local/src/bare/dist/ ./
-COPY --from=build /usr/local/src/bare/package.json /usr/local/src/bare/package-lock.json ./
-RUN npm ci && npm cache clean --force
+COPY --from=build /usr/local/src/basic/.output/ ./
 EXPOSE 3000
-CMD ["node", "/app/server.js"]
+CMD ["node", "/app/server/index.mjs"]

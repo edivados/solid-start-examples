@@ -1,6 +1,6 @@
 import { invoke } from "@tauri-apps/api";
 import { createSignal } from "solid-js";
-import { Title } from "solid-start";
+import { Title } from "@solidjs/meta";
 import Counter from "~/components/Counter";
 
 export default function Home() {
@@ -22,3 +22,4 @@ export default function Home() {
     </main>
   );
 }
+

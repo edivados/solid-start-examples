@@ -1,3 +1,4 @@
+"use client";
 import { createSignal } from "solid-js";
 import "./Counter.css";
 

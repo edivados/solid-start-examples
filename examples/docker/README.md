@@ -1,28 +1,30 @@
-# What is this?
+# SolidStart
 
-Example of how to dockerize a solid-start project. Based on the solid-start bare example with a modified package.json.
+Everything you need to build a Solid project, powered by [`solid-start`](https://start.solidjs.com);
 
-## Docker
-
-```bash
-docker build -t bare .
-```
+## Creating a project
 
 ```bash
-docker run -p 3000:3000 bare
+# create a new project in the current directory
+npm init solid@latest
+
+# create a new project in my-app
+npm init solid@latest my-app
 ```
 
-## Numbers
+## Developing
 
-|Image|Image size (Uncompressed)|App size  |node_modules size|
-|-----|-------------------------|----------|-----------------|
-|node:lts-alpine3.16|174 MB     |1.6 MB    |72 KB            |
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-App size includes:
- - node_modules/
- - public/
- - package.json
- - package-lock.json
- - server.js
+```bash
+npm run dev
 
-*Note: Because the modified package.json contains only dev dependencies, installing packages on the final build could be omitted.*
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+Solid apps are built with _adapters_, which optimise your project for deployment to different environments.
+
+By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different adapter, add it to the `devDependencies` in `package.json` and specify in your `vite.config.js`.

@@ -1,2 +1,4 @@
 .git/
+.output/
+.vinxi/
 node_modules/

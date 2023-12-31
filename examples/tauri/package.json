@@ -2,25 +2,27 @@
   "name": "example-tauri",
   "type": "module",
   "scripts": {
-    "dev": "solid-start dev",
-    "build": "solid-start build",
-    "preview": "solid-start start",
-    "serve": "node ./dist/server.js",
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "preview": "vinxi start",
+    "serve": "node ./.output/server/index.mjs",
     "tauri": "tauri"
   },
-  "license": "MIT",
   "dependencies": {
-    "@solidjs/meta": "^0.29.1",
-    "@solidjs/router": "^0.9.1",
+    "@solidjs/meta": "^0.29.3",
+    "@solidjs/router": "^0.10.5",
+    "@solidjs/start": "^0.4.2",
     "@tauri-apps/api": "^1.2.0",
-    "solid-js": "^1.8.5",
-    "solid-start": "^0.3.10",
-    "solid-start-node": "^0.3.10"
+    "solid-js": "^1.8.7",
+    "vinxi": "^0.0.61"
   },
   "devDependencies": {
     "@types/node": "^18.7.10",
     "@tauri-apps/cli": "^1.2.2",
     "typescript": "^4.7.4",
     "vite": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

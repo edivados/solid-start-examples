@@ -4,7 +4,7 @@ import fs from "fs/promises";
 import { promisify } from "util";
 
 const execAsync = promisify(exec);
-const packages = ["solid-js", "solid-start", "solid-start-node", "@solidjs/router", "@solidjs/meta"];
+const packages = ["solid-js", "@solidjs/start", "vinxi", "@solidjs/router", "@solidjs/meta"];
 const versions = await Promise.all(packages.map(async (name) => ({
   name, 
   version: (await execAsync(`npm view ${name} version`)).stdout.toString().trim()

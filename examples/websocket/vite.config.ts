@@ -1,14 +1,11 @@
-import solid from "solid-start/vite";
-import { defineConfig } from "vite";
-import node from "solid-start-node-websocket";
+import { defineConfig } from "@solidjs/start/config";
 
 export default defineConfig({
-  server: {
-    hmr: {
-      port: 3001
+  clearScreen: false,
+  start: {
+    middleware: "./src/middleware.ts",
+    server: {
+      preset: "./preset"
     }
-  },
-  plugins: [
-    solid({ adapter: node() })
-  ],
+  }
 });

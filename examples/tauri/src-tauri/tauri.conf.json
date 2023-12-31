@@ -2,8 +2,8 @@
   "build": {
     "beforeDevCommand": "npm run dev --https",
     "beforeBuildCommand": "npm run build",
-    "devPath": "http://localhost:1420",
-    "distDir": "../dist/public",
+    "devPath": "http://localhost:3000",
+    "distDir": "../.output/public",
     "withGlobalTauri": false
   },
   "package": {
