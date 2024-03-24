@@ -1,9 +1,9 @@
-FROM node:lts-buster-slim as build
+FROM node:lts-slim as build
 WORKDIR /usr/local/src/basic
 COPY ./ ./
 RUN npm i && npm run build
 
-FROM node:lts-buster-slim
+FROM node:lts-slim
 ENV NODE_ENV=production
 WORKDIR /app
 COPY --from=build /usr/local/src/basic/.output/ ./
