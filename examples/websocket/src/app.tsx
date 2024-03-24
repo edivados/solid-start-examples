@@ -3,23 +3,29 @@ import { createSignal, onMount } from "solid-js";
 import "./app.css";
 
 export default function App() {
-  const [count, setCount] = createSignal(0);
+  let socket: WebSocket | undefined;
+
+  const [connected, setConnected] = createSignal(false);
+  const [counter, setCounter] = createSignal(0);
 
   onMount(() => {
     const protocol = window.location.protocol.endsWith("s:") ? "wss:" : "ws:";
-    const url = `${protocol}//${window.location.host}/ws`;
-    const socket = new WebSocket(url);
-    socket.addEventListener("open", () => {
-      console.log("open");
-      alert("connected");
-    });
+    const url = `${protocol}//${window.location.host}/_ws`;
+    socket = new WebSocket(url);
+    socket.addEventListener("open", () => setConnected(true));
+    socket.addEventListener("message", ({ data }) => setCounter(data));
+    socket.addEventListener("close", () => setConnected(false));
   });
 
   return (
     <main>
       <h1>Hello world!</h1>
-      <button class="increment" onClick={() => setCount(count() + 1)}>
-        Clicks: {count()}
+      <h2 classList={{ connected: connected(), disconnected: !connected() }}>
+        { connected() ? "Connected" : "Disconnected" }
+      </h2>
+      <p>Open the site in a second window side by side to see websocket in action.</p>
+      <button class="increment" onClick={() => socket?.send("")}>
+        Clicks: {counter()}
       </button>
       <p>
         Visit{" "}

@@ -1,13 +1,7 @@
 /// <reference types="@solidjs/start/env" />
 
-import { Server } from "ws";
+import { App } from "vinxi";
 
 declare global {
-  var ws: Server;
-}
-
-declare module "@solidjs/start/server" {
-  interface RequestEventLocals {
-    ws: Server
-  }
+  var app: App;
 }
