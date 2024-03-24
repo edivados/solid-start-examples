@@ -7,7 +7,7 @@ export default function App() {
 
   onMount(() => {
     const protocol = window.location.protocol.endsWith("s:") ? "wss:" : "ws:";
-    const url = `${protocol}//${window.location.host}:${window.location.port}/ws`;
+    const url = `${protocol}//${window.location.host}/ws`;
     const socket = new WebSocket(url);
     socket.addEventListener("open", () => {
       console.log("open");
