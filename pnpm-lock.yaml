@@ -49,9 +49,6 @@ importers:
       '@solidjs/start':
         specifier: ^1.0.0-rc.0
         version: 1.0.0-rc.0(solid-js@1.8.16)(vinxi@0.3.10)(vite@5.1.6)
-      '@types/ws':
-        specifier: ^8.5.10
-        version: 8.5.10
       solid-js:
         specifier: ^1.8.16
         version: 1.8.16
@@ -64,9 +61,6 @@ importers:
       '@solidjs/start':
         specifier: ^1.0.0-rc.0
         version: 1.0.0-rc.0(solid-js@1.8.16)(vinxi@0.3.10)(vite@5.1.6)
-      '@types/ws':
-        specifier: ^8.5.10
-        version: 8.5.10
       solid-js:
         specifier: ^1.8.16
         version: 1.8.16
@@ -1711,12 +1705,6 @@ packages:
 
   /@types/resolve@1.20.2:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
-    dev: false
-
-  /@types/ws@8.5.10:
-    resolution: {integrity: sha512-vmQSUcfalpIq0R9q7uTo2lXs6eGIpt9wtnLdMv9LVpIjCA/+ufZRozlVoVelIYixx1ugCBKDhn89vnsEGOCx9A==}
-    dependencies:
-      '@types/node': 18.18.9
     dev: false
 
   /@vercel/nft@0.26.4:
