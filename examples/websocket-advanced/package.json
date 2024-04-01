@@ -1,0 +1,22 @@
+{
+  "name": "example-websocket-advanced",
+  "type": "module",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "node ./.output/server/index.mjs"
+  },
+  "dependencies": {
+    "@solidjs/start": "^1.0.0-rc.0",
+    "@types/ws": "^8.5.10",
+    "solid-js": "^1.8.16",
+    "vinxi": "^0.3.10"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "crossws": "^0.2.4",
+    "radix3": "^1.1.2"
+  }
+}

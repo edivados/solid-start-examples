@@ -59,6 +59,28 @@ importers:
         specifier: ^0.3.10
         version: 0.3.10
 
+  examples/websocket-advanced:
+    dependencies:
+      '@solidjs/start':
+        specifier: ^1.0.0-rc.0
+        version: 1.0.0-rc.0(solid-js@1.8.16)(vinxi@0.3.10)(vite@5.1.6)
+      '@types/ws':
+        specifier: ^8.5.10
+        version: 8.5.10
+      solid-js:
+        specifier: ^1.8.16
+        version: 1.8.16
+      vinxi:
+        specifier: ^0.3.10
+        version: 0.3.10
+    devDependencies:
+      crossws:
+        specifier: ^0.2.4
+        version: 0.2.4
+      radix3:
+        specifier: ^1.1.2
+        version: 1.1.2
+
 packages:
 
   /@ampproject/remapping@2.2.1:
@@ -2348,7 +2370,6 @@ packages:
     peerDependenciesMeta:
       uWebSockets.js:
         optional: true
-    dev: false
 
   /csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
@@ -2977,7 +2998,7 @@ packages:
       destr: 2.0.3
       iron-webcrypto: 1.0.0
       ohash: 1.1.3
-      radix3: 1.1.1
+      radix3: 1.1.2
       ufo: 1.4.0
       uncrypto: 0.1.3
       unenv: 1.9.0
@@ -2992,7 +3013,7 @@ packages:
       destr: 2.0.3
       iron-webcrypto: 1.0.0
       ohash: 1.1.3
-      radix3: 1.1.1
+      radix3: 1.1.2
       ufo: 1.4.0
       uncrypto: 0.1.3
       unenv: 1.9.0
@@ -3699,7 +3720,7 @@ packages:
       perfect-debounce: 1.0.0
       pkg-types: 1.0.3
       pretty-bytes: 6.1.1
-      radix3: 1.1.1
+      radix3: 1.1.2
       rollup: 4.13.0
       rollup-plugin-visualizer: 5.12.0(rollup@4.13.0)
       scule: 1.3.0
@@ -4018,6 +4039,9 @@ packages:
   /radix3@1.1.1:
     resolution: {integrity: sha512-yUUd5VTiFtcMEx0qFUxGAv5gbMc1un4RvEO1JZdP7ZUl/RHygZK6PknIKntmQRZxnMY3ZXD2ISaw1ij8GYW1yg==}
     dev: false
+
+  /radix3@1.1.2:
+    resolution: {integrity: sha512-b484I/7b8rDEdSDKckSSBA8knMpcdsXudlE/LNL639wFoHKwLbEkQFZHWEYwDC0wa0FKUcCY+GAF73Z7wxNVFA==}
 
   /randombytes@2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
