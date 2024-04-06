@@ -1,4 +1,4 @@
-import { Peer } from "crossws";
+import type { Peer } from "crossws";
 
 export default {
   _value: 0,
