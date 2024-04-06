@@ -16,6 +16,11 @@ export default lazyEventHandler(() => {
 
   return eventHandler({
     handler: async (event) => {
+      // This is an internal API. Remote calls not allowed.
+      if (event.node.req.socket.remoteAddress) {
+        return new Response(null, { status: 404 });
+      }
+
       const route = router.lookup(event.path);
       if (!route) {
         return new Response(null, { status: event.path === "/" ? 426 : 404 });
