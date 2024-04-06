@@ -1,7 +1,8 @@
 // @refresh reload
 import { createSignal, onMount } from "solid-js";
-import "./app.css";
 import { increment } from "./ws/server-fns";
+import { join } from "vinxi/lib/path";
+import "./app.css";
 
 export default function App() {
   let socket: WebSocket | undefined;
@@ -11,7 +12,7 @@ export default function App() {
 
   onMount(() => {
     const protocol = window.location.protocol.endsWith("s:") ? "wss:" : "ws:";
-    const url = `${protocol}//${window.location.host}/_ws`;
+    const url = `${protocol}//${join(window.location.host, import.meta.env.SERVER_BASE_URL || "/", "/_ws")}`;
     socket = new WebSocket(url);
     socket.addEventListener("open", () => setConnected(true));
     socket.addEventListener("message", ({ data }) => setCounter(data));
