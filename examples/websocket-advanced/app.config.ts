@@ -38,4 +38,11 @@ app.addRouter({
   ]
 });
 
+app.hooks.hook("app:dev:server:created", ({ devApp }) => {
+  // 1. Dev does not support user defined plugins yet so this hook is used to mimic a plugin call at startup.
+  // 2. Vinxi does expose the h3 handler but not nitro's $fetch (localFetch) helper.
+  // Note: Using "app:dev:server:listener:creating" hook would also work but runs after vinxi's current dev plugins.
+  globalThis.$fetch = devApp.localFetch;
+});
+
 export default app;
