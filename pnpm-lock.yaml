@@ -55,6 +55,10 @@ importers:
       vinxi:
         specifier: ^0.3.10
         version: 0.3.10
+    devDependencies:
+      crossws:
+        specifier: ^0.2.4
+        version: 0.2.4
 
   examples/websocket-advanced:
     dependencies:

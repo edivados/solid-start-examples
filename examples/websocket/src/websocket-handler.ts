@@ -1,10 +1,12 @@
 import { EventHandler, eventHandler } from "vinxi/http";
+import type { Peer } from "crossws";
 
 function lazyEventHandler(fn: () => EventHandler) {
   return fn();
 }
 
 export default lazyEventHandler(() => {
+  const peers = new Set<Peer>();
   let counter = 0;
   return eventHandler({
     handler: () => {},
@@ -13,17 +15,19 @@ export default lazyEventHandler(() => {
         // noop
       },
       open(peer) {
-        peer.subscribe("counter");
+        peers.add(peer);
         peer.send(counter);
       },
       message(peer, message) {
         ++counter;
-        // Publish does not include the current peer.
-        peer.send(counter);
-        peer.publish("counter", counter);
+        // not using pub/sub because it is only available for bun and node.
+        // https://crossws.unjs.io/guide/pubsub
+        for (const peer of peers) {
+          peer.send(counter);
+        }
       },
       close(peer) {
-        peer.unsubscribe("counter");
+        peers.delete(peer);
       }
     }
   });
