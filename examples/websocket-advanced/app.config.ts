@@ -6,7 +6,6 @@ import { createFetch, Headers } from "ofetch";
 
 const app = defineConfig({
   server: {
-    baseURL: "/test",
     experimental: {
       websocket: true
     }
