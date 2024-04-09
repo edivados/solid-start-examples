@@ -1,5 +1,5 @@
 // @refresh reload
-import { createSignal, onMount } from "solid-js";
+import { createSignal, onCleanup, onMount } from "solid-js";
 import { increment } from "./ws/server-fns";
 import { join } from "vinxi/lib/path";
 import "./app.css";
@@ -17,6 +17,7 @@ export default function App() {
     socket.addEventListener("open", () => setConnected(true));
     socket.addEventListener("message", ({ data }) => setCounter(data));
     socket.addEventListener("close", () => setConnected(false));
+    onCleanup(() => socket?.close());
   });
 
   return (
