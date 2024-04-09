@@ -33,8 +33,7 @@ app.addRouter({
         alias: {
           "~": join(app.config.root, "src"),
         }
-      },
-      cacheDir: "node_modules/.vinxi/ws"
+      }
     })
   ]
 });
