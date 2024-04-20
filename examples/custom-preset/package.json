@@ -1,0 +1,23 @@
+{
+  "name": "example-custom-preset",
+  "type": "module",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start"
+  },
+  "dependencies": {
+    "@solidjs/meta": "^0.29.3",
+    "@solidjs/router": "^0.13.1",
+    "@solidjs/start": "^1.0.0-rc.0",
+    "solid-js": "^1.8.16",
+    "vinxi": "^0.3.10"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "crossws": "^0.2.4",
+    "destr": "^2.0.3"
+  }
+}
